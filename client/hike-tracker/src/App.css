@@ -1,0 +1,146 @@
+/*------------------Header-----------------*/
+.app-header {
+  background-color: #274111;
+  width: 100vw;
+  height: 10vh;
+  color: #fff;
+}
+
+.app-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app-title {
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-left: 10vw;
+  transition: .15s ease;
+}
+
+.app-title:hover {
+  transition: .15s ease;
+  color: #dadada;
+}
+
+.nav-right ul {
+  display: flex;
+}
+
+.nav-right ul li {
+  transition: .15s ease;
+  margin: 10px;
+}
+
+.nav-right ul li:hover {
+  transition: .15s ease;
+  color: #dadada;
+}
+
+/*------------------Main-----------------*/
+/* .app-main {
+  height: 100vh;
+  flex: 2;
+} */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  border-radius: 10px;
+}
+
+.sub-h2 {
+  color: rgb(50, 50, 50);
+  font-size: 1.4em;
+  text-align: center;
+  /* margin: 30px; */
+  /* padding: 10px; */
+  /* background-color: #128fdc; */
+  height: auto;
+  /* border-radius: 5px; */
+}
+
+/*-------------Hikescomp-------------*/
+.hike-div {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  height: auto;
+  margin: 0px 20px 20px 0px;
+  width: 20vw;
+}
+
+.line {
+  font-size: 1em;
+  text-align: center;
+  margin: 10px;
+}
+
+.success {
+  text-align: center;
+}
+
+/*----------------Form Styling----------------*/
+.submit-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.submit-header {
+  font-size: 20px;
+  margin: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
+  text-align: center;
+}
+
+.submit-form input,
+.submit-form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px auto 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.submit-form input[type=submit] {
+  color: #fff;
+  background-color: #0a4a00;
+  cursor: pointer;
+}
+
+.submit-form input[type=submit]:hover {
+  color: #dadada;
+}
+
+/*------------------Footer-----------------*/
+
+.legal {
+  color: rgb(92, 83, 83);
+  font-size: .9em;
+  padding-left: 10vw;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  color: gray;
+  /* position: absolute; */
+  bottom: 0;
+  border-top: .5px gray solid;
+}
