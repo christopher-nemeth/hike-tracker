@@ -1,39 +1,59 @@
 import React from 'react';
 import { Modal, Form, Button, Icon } from 'semantic-ui-react';
 
-export class HikesForm extends React.Component {
+export class updateForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      id: props.id,
       showModal: false
     }
   }
 
+  state = {
+    id: '',
+    name: '',
+    location: '',
+    elevation: '',
+    terrain: ''
+  }
+
+  fetchData() {
+    fetch('https://tower-project.herokuapp.com/hikes')
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          hikes: res.data
+        })
+      })
+  }
+
   handleChange = (event) => {
     const name = event.target.name
+    console.log(event.target.value)
     this.setState({[name]: event.target.value})
+    console.log('state submitted')
   }
 
   formSubmit = (event) => {
+    console.log('submitted')
     event.preventDefault()
     const url = 'https://tower-project.herokuapp.com/hikes'
-    const postData = {
+    const putData = {
       name: this.state.name,
       location: this.state.location,
       elevation: this.state.elevation,
       terrain: this.state.terrain,
     }
+    console.log(putData)
     fetch(url, {
-      method: 'POST',
+      method: 'PUT',
       headers: {
         'content-type': 'application/json'
       },
-      body: JSON.stringify(postData),
+      body: JSON.stringify(putData),
     })
-      .then(response => response.json())
-      .then(response => {
-        this.props.updatedHike(response)
-      })
+    .then(response => response.json())
     .then(this.setState({
       name: '',
       location: '',
@@ -41,7 +61,14 @@ export class HikesForm extends React.Component {
       terrain: ''
       }))
       .then(this.closeModal)
+      .then(console.log(this.state.hikes))
+
   }
+
+  // handleCreateButton(evt) {
+  //   evt.preventDefault()
+  //   this.closeModal();
+  // }
 
   closeModal = () => {
     this.setState({ showModal: false })
@@ -82,3 +109,27 @@ export class HikesForm extends React.Component {
     )
   }
 }
+
+
+
+// import React from 'react'
+
+// export class UpdateForm extends React.Component{
+//   state = {
+//     showPreview: false
+//   }
+
+//   toggleUpdate = (event) => {
+//     event.preventDefault()
+//     const preview = !this.state.showPreview
+//     this.setState({ showPreview: preview })
+//   }
+
+//   render() {
+//     return (
+//       <div>
+
+//       </div>
+//     )
+//   }
+// }

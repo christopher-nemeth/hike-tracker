@@ -1,132 +1,78 @@
+/*-----------Sticky Footer Hack-------------*/
+.Site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.Site-content {
+    flex: 1 0 auto;
+    padding: var( — space) var( — space) 0;
+    width: 100%;
+}
+.Site-content:after {
+    content: ‘\00a0’;
+    display: block;
+    margin-top: var( — space);
+    height: 0;
+    visibility: hidden;
+}
+
 /*------------------Header-----------------*/
-.app-header {
-  background-color: #274111;
-  width: 100vw;
-  height: 10vh;
+.App-header {
   color: #fff;
-}
-
-.app-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.app-title {
-  font-size: 1.4em;
-  font-weight: bold;
+  flex-direction: row;
+  padding-top: 2vw;
   padding-left: 10vw;
-  transition: .15s ease;
-}
-
-.app-title:hover {
-  transition: .15s ease;
-  color: #dadada;
-}
-
-.nav-right ul {
-  display: flex;
-}
-
-.nav-right ul li {
-  transition: .15s ease;
-  margin: 10px;
-}
-
-.nav-right ul li:hover {
-  transition: .15s ease;
-  color: #dadada;
 }
 
 /*------------------Main-----------------*/
-/* .app-main {
-  height: 100vh;
-  flex: 2;
-} */
-
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  border-radius: 10px;
 }
 
 .sub-h2 {
-  color: rgb(50, 50, 50);
-  font-size: 1.4em;
+  color:#EA973F;
+  font-size: 2em;
   text-align: center;
-  /* margin: 30px; */
-  /* padding: 10px; */
-  /* background-color: #128fdc; */
   height: auto;
-  /* border-radius: 5px; */
+  padding-bottom: 4vh;
 }
 
-/*-------------Hikescomp-------------*/
-.hike-div {
+.ui.cards {
+  padding: 1vw;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  height: auto;
-  margin: 0px 20px 20px 0px;
-  width: 20vw;
+  align-items: flex-end ;
+  padding-right: 10vw;
 }
 
-.line {
-  font-size: 1em;
-  text-align: center;
-  margin: 10px;
+.logo {
+  height: 25vh;
 }
 
-.success {
-  text-align: center;
+.header-logo {
+  height: 5vh;;
 }
 
-/*----------------Form Styling----------------*/
-.submit-container {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 100%;
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25vh;
 }
 
-.submit-header {
-  font-size: 20px;
-  margin: 10px 0 10px 0;
-  padding: 5px 0 5px 0;
-  text-align: center;
-}
-
-.submit-form input,
-.submit-form textarea {
+.map {
+  height: 500px;
   width: 100%;
-  padding: 12px 20px;
-  margin: 10px auto 10px auto;
-  display: block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-.submit-form input[type=submit] {
-  color: #fff;
-  background-color: #0a4a00;
-  cursor: pointer;
-}
-
-.submit-form input[type=submit]:hover {
-  color: #dadada;
 }
 
 /*------------------Footer-----------------*/
-
 .legal {
   color: rgb(92, 83, 83);
   font-size: .9em;
@@ -139,8 +85,7 @@
   height: 8vh;
   width: 100vw;
   background-color: rgb(255, 255, 255);
-  color: gray;
-  /* position: absolute; */
+  color: #58585A;
   bottom: 0;
-  border-top: .5px gray solid;
+  /* border-top: .2px gray solid; */
 }
