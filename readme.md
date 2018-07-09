@@ -26,3 +26,10 @@ Hike tracker is a fullstack crud app which allows users to track hikes they have
 
 - I love minimalsm when it comes to styling, but I would like to play with react semantic UI some more. At this momemnt I do not have a clear direction as to where I want to take it from a UX/UI stand point
 
+## Setup Instructions
+
+To run this project locally:
+
+1. Fork and clone this repo
+2. In your command line run: `git clone {your-forked-repo-link}`
+3. Run `npm install`
