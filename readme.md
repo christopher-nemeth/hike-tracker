@@ -33,3 +33,13 @@ To run this project locally:
 1. Fork and clone this repo
 2. In your command line run: `git clone {your-forked-repo-link}`
 3. Run `npm install`
+
+## Contact Author
+Christopher Nemeth
+cnemeth1@gmail.com
+
+If you would like to contribute please contact me here.
+
+
+--
+MIT License
