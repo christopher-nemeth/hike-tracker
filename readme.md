@@ -1,3 +1,5 @@
+![logo](hike-tracker.png)
+
 # Hike-Tracker
 Hike tracker is a fullstack crud app which allows users to track hikes they have accomplished and rate them.
 
