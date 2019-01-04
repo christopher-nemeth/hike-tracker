@@ -1,22 +1,22 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import {Header} from './components/Header';
-import {HomeComp} from './components/HomeComp'
-import {Hikes} from './components/Hikes';
-import {HikesForm} from './components/HikesForm';
-import {ReviewsForm} from './components/ReviewsForm';
-import {Reviews} from './components/Reviews';
-import {Footer} from './components/Footer';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { Header } from './components/Header';
+import { HomeComp } from './components/HomeComp';
+import { Hikes } from './components/Hikes';
+import { HikesForm } from './components/HikesForm';
+import { ReviewsForm } from './components/ReviewsForm';
+import { Reviews } from './components/Reviews';
+import { Footer } from './components/Footer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       hikes: [],
       reviews: []
-    }
+    };
   }
 
   updatedHike = (hike) => {
@@ -25,8 +25,8 @@ class App extends Component {
       .then(res => {
         this.setState({
           hikes: res.data
-        })
-      })
+        });
+      });
   }
 
   updatedReview = (review) => {
@@ -35,9 +35,9 @@ class App extends Component {
       .then(res => {
         this.setState({
           reviews: res.data
-        })
-      })
-  }
+        });
+      });
+  };
 
   componentDidMount() {
     fetch('https://tower-project.herokuapp.com/hikes')
@@ -45,17 +45,16 @@ class App extends Component {
       .then(res => {
         this.setState({
           hikes: res.data
-        })
-      })
+        });
+      });
 
     fetch('https://tower-project.herokuapp.com/reviews')
       .then(res => res.json())
       .then(res => {
         this.setState({
-        reviews: res.data
-        })
-
-    })
+          reviews: res.data
+        });
+      });
   }
 
   render() {
@@ -73,7 +72,7 @@ class App extends Component {
               </div>
               <Route path='/app/hikes' component={() => <Hikes updatedHike={this.updatedHike} hikes={this.state.hikes} />} />
               <div className='form-container'>
-                <Route path='/app/reviews' component={() => <ReviewsForm updatedReview={this.updatedReview}/>} />
+                <Route path='/app/reviews' component={() => <ReviewsForm updatedReview={this.updatedReview} />} />
               </div>
               <Route path='/app/reviews' component={() => <Reviews updatedReview={this.updatedReview} reviews={this.state.reviews} />} />
             </div>

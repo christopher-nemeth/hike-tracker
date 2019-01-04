@@ -17,10 +17,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-      "test": "npx cypress run",
+    "test": "npx cypress run",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "cypress": "^3.0.1"
+    "cypress": "^3.0.1",
+    "nodemon": "^1.17.5"
   }
 }
